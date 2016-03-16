@@ -1,6 +1,7 @@
 {CompositeDisposable} = require 'atom'
 
 starsEffect = require './effect/stars.coffee'
+heartsEffect = require './effect/hearts.coffee'
 
 module.exports = PowerEffects =
   subscriptions: null
@@ -18,3 +19,4 @@ module.exports = PowerEffects =
 
   consumeActivatePowerModeServiceV1: (activatePowerMode) ->
     activatePowerMode.registerEffect 'Stars', starsEffect
+    activatePowerMode.registerEffect 'Hearts', heartsEffect
