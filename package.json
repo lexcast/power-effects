@@ -1,0 +1,26 @@
+{
+  "name": "power-effects",
+  "main": "./lib/power-effects",
+  "version": "0.0.0",
+  "description": "Extra cool effects for the Activate Power Mode Package",
+  "keywords": [
+      "effect",
+      "activate-power-mode"
+  ],
+  "repository": "https://github.com/lexcast/power-effects",
+  "author": "Daniel Alejandro Cast <lexcast13@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "consumedServices": {
+    "activate-power-mode": {
+      "versions": {
+        "^1.0.0": "consumeActivatePowerModeServiceV1"
+      }
+    }
+  },
+  "dependencies": {
+    "lodash.random": "^3.0.1"
+  }
+}
