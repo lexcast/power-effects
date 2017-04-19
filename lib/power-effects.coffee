@@ -1,17 +1,13 @@
 {CompositeDisposable} = require 'atom'
 
-starsEffect = require './effect/stars.coffee'
-heartsEffect = require './effect/hearts.coffee'
-lightsEffect = require './effect/lights.coffee'
-charactersEffect = require './effect/characters.coffee'
+stars = require './effect/stars'
+hearts = require './effect/hearts'
+lights = require './effect/lights'
+characters = require './effect/characters'
 
 module.exports = PowerEffects =
   subscriptions: null
   config:
-    usePreferedColors:
-      title: "Use effect prefered colors"
-      type: "boolean"
-      default: true
     charactersEffect:
       title: "Characters effect"
       type: 'object'
@@ -33,8 +29,12 @@ module.exports = PowerEffects =
   deactivate: ->
     @subscriptions.dispose()
 
-  consumeActivatePowerModeServiceV1: (activatePowerMode) ->
-    activatePowerMode.registerEffect 'Stars', starsEffect
-    activatePowerMode.registerEffect 'Hearts', heartsEffect
-    activatePowerMode.registerEffect 'Lights', lightsEffect
-    activatePowerMode.registerEffect 'Characters', charactersEffect
+  consumeActivatePowerModeServiceV1: (service) ->
+    starsEffect = service.createParticlesEffect stars
+    heartsEffect = service.createParticlesEffect hearts
+    lightsEffect = service.createParticlesEffect lights
+    charactersEffect = service.createParticlesEffect characters
+    service.registerEffect 'powerEffectsStars', starsEffect
+    service.registerEffect 'powerEffectsHearts', heartsEffect
+    service.registerEffect 'powerEffectsLights', lightsEffect
+    service.registerEffect 'powerEffectsCharacters', charactersEffect

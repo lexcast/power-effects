@@ -1,13 +1,7 @@
 random = require "lodash.random"
 
-chinese = "田由甲申甴电甶男甸甹町画甼甽甾甿畀畁畂畃畄畅畆畇畈畉畊畋界畍畎畏畐畑"
+chinese = "功率火水地球空气最好游戏编程龙虎鹰音乐电脑"
 runic = "ᚠᚢᚦᚨᚱᚲᚷᚹᚺᚾᛁᛃᛇᛈᛉᛊᛏᛒᛖᛗᛚᛜᛞᛟ"
-
-getConfig = (config) ->
-  atom.config.get "activate-power-mode.#{config}"
-
-useEffectPreferedColor = ->
-  atom.config.get "power-effects.usePreferedColors"
 
 getCharactersSet = ->
   atom.config.get "power-effects.charactersEffect.set"
@@ -16,10 +10,16 @@ getCustomCharactersSet = ->
   atom.config.get "power-effects.charactersEffect.customSet"
 
 module.exports =
+  title: 'Characters'
+  description: 'Characters from a set (runic, chinese or custom).'
+  image: 'atom://power-effects/images/characters-effect.gif'
+
+  isDone: (particle) ->
+    particle.alpha <= .1
+
   init: (particle) ->
-    particle.size = random getConfig("particles.size.min"), getConfig("particles.size.max"), true
-    particle.vx = -1 + Math.random() * 2
-    particle.vy = -2.1 + Math.random() * 2
+    particle.velocity.x = -1 + Math.random() * 2
+    particle.velocity.y = -2.1 + Math.random() * 2
 
     set = getCharactersSet()
     chars = chinese.split("") if set is 'chinese'
@@ -28,18 +28,14 @@ module.exports =
     particle.char = chars[Math.floor(Math.random() * chars.length)]
 
   update: (particle, context) ->
-    set = getCharactersSet()
-
-    particle.x += particle.vx
-    particle.y += particle.vy
+    particle.x += particle.velocity.x
+    particle.y += particle.velocity.y
     particle.alpha *= 0.96
 
-    context.font = "bolder " + (particle.size * 2.5) + "px Ubuntu"
+  draw: (particle, context) ->
+    set = getCharactersSet()
+    context.font = "bolder " + (particle.size * 3) + "px sans-serif"
 
-    if useEffectPreferedColor() and set != 'custom'
-      context.fillStyle = "rgba(245, 50, 50, #{particle.alpha})" if set is 'chinese'
-      context.fillStyle = "rgba(93, 233, 247, #{particle.alpha})" if set is 'runic'
-    else
-      context.fillStyle = "rgba(#{particle.color[4...-1]}, #{particle.alpha})"
+    context.fillStyle = "rgba(#{particle.color[4...-1]}, #{particle.alpha})"
 
     context.fillText(particle.char, particle.x, particle.y)

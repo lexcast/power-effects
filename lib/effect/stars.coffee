@@ -1,23 +1,18 @@
-random = require "lodash.random"
-
-getConfig = (config) ->
-  atom.config.get "activate-power-mode.#{config}"
-
-useEffectPreferedColor = ->
-  atom.config.get "power-effects.usePreferedColors"
-
 module.exports =
-  init: (particle) ->
-    particle.size = random getConfig("particles.size.min"), getConfig("particles.size.max"), true
-    particle.vx = -1 + Math.random() * 2
-    particle.vy = -3.5 + Math.random() * 2
+  title: 'Stars'
+  description: 'Fun stars.'
+  image: 'atom://power-effects/images/stars-effect.gif'
 
-  update: (particle, context) ->
-    particle.vy += 0.075
-    particle.x += particle.vx
-    particle.y += particle.vy
+  isDone: (particle) ->
+    particle.alpha <= .1
+
+  update: (particle) ->
+    particle.velocity.y += 0.075
+    particle.x += particle.velocity.x
+    particle.y += particle.velocity.y
     particle.alpha *= 0.96
 
+  draw: (particle, context) ->
     context.beginPath()
     context.translate(particle.x, particle.y)
     for i in [5...0]
@@ -31,11 +26,8 @@ module.exports =
     context.closePath()
     context.translate(-particle.x, -particle.y)
 
-    if useEffectPreferedColor()
-      context.fillStyle = "rgba(255, 255, 200, #{particle.alpha})"
-      context.shadowColor = "rgba(255, 255, 51, #{particle.alpha})"
-    else
-      context.fillStyle = context.shadowColor = "rgba(#{particle.color[4...-1]}, #{particle.alpha})"
+    color = "rgba(#{particle.color[4...-1]}, #{particle.alpha})"
+    context.fillStyle = context.shadowColor = color
 
     context.shadowBlur = 3
     context.fill()

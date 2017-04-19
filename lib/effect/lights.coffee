@@ -1,29 +1,21 @@
-random = require "lodash.random"
-
-getConfig = (config) ->
-  atom.config.get "activate-power-mode.#{config}"
-
-useEffectPreferedColor = ->
-  atom.config.get "power-effects.usePreferedColors"
-
 module.exports =
+  title: 'Lights'
+  description: 'Like in a party.'
+  image: 'atom://power-effects/images/lights-effect.gif'
+
+  isDone: (particle) ->
+    particle.size <= .1
+
   init: (particle) ->
-    particle.size = random getConfig("particles.size.min"), getConfig("particles.size.max"), true
-    particle.vx = -1 + Math.random() * 2
-    particle.vy = -2.5 + Math.random() * 2
+    particle.velocity.y = -2.5 + Math.random() * 2
 
-    if useEffectPreferedColor()
-      r = Math.round(Math.random() * 255)
-      g = Math.round(Math.random() * 255)
-      b = Math.round(Math.random() * 255)
-      particle.color = "rgb(#{r}, #{g}, #{b})"
-
-  update: (particle, context) ->
-    p = particle
-    p.x += p.vx
-    p.y += p.vy
+  update: (p) ->
+    p.x += p.velocity.x
+    p.y += p.velocity.y
     p.alpha *= 0.96
+    p.size -= 0.1
 
+  draw: (p, context) ->
     context.beginPath()
     gradient = context.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.size * 2)
     gradient.addColorStop(0, "rgba(#{p.color[4...-1]}, #{p.alpha})")
@@ -32,5 +24,3 @@ module.exports =
     context.fillStyle = gradient
     context.arc(p.x, p.y, p.size * 2, Math.PI * 2, false)
     context.fill()
-
-    p.size -= 0.1
