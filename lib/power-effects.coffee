@@ -26,6 +26,9 @@ module.exports = PowerEffects =
   activate: (state) ->
     @subscriptions = new CompositeDisposable
 
+    requestIdleCallback ->
+      require('atom-package-deps').install('power-effects')
+
   deactivate: ->
     @subscriptions.dispose()
 

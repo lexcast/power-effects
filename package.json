@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "description": "Extra cool effects for the Activate Power Mode Package",
   "keywords": [
-      "effect",
-      "activate-power-mode"
+    "effect",
+    "activate-power-mode"
   ],
   "repository": "https://github.com/lexcast/power-effects",
   "author": "Daniel Alejandro Cast <lexcast13@gmail.com>",
@@ -21,6 +21,8 @@
     }
   },
   "dependencies": {
+    "atom-package-deps": "^4.6.0",
     "lodash.random": "^3.0.1"
-  }
+  },
+  "package-deps": ["activate-power-mode"]
 }
