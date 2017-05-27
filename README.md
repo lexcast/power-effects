@@ -1,6 +1,15 @@
 # Power Effects
 
-This package adds some cool effects to the [activate-power-mode](https://github.com/JoelBesada/activate-power-mode)
+[![apm install power-effects](https://apm-badges.herokuapp.com/apm/power-effects.svg)](https://atom.io/packages/power-effects)
+
+This package adds some cool effects for the [activate-power-mode](https://github.com/JoelBesada/activate-power-mode)
+
+## Install
+With apm:
+```bash
+apm install power-effects
+```
+Or Settings ➔ Packages ➔ Search for `power-effects`
 
 ## Effects
 ### Stars
@@ -24,3 +33,8 @@ This package adds some cool effects to the [activate-power-mode](https://github.
 * Custom
 
 ![Custom](https://cloud.githubusercontent.com/assets/10590799/14092753/556380d4-f506-11e5-9ea8-77690d496596.gif)
+
+## Select effect
+To change the effect use the `activate-power-mode:select-effect` command.
+
+![1492405158648](https://cloud.githubusercontent.com/assets/10590799/25079324/fd5bb0a8-2300-11e7-97a9-422bdaf8edce.gif)
