@@ -30,6 +30,10 @@ Or Settings ➔ Packages ➔ Search for `power-effects`
 
 ![Runic](https://cloud.githubusercontent.com/assets/10590799/14092749/52d5c278-f506-11e5-81ea-337f499b7486.gif)
 
+* Greek
+
+![Greek](https://cloud.githubusercontent.com/assets/10590799/26807403/dab2cf4a-4a1b-11e7-85b9-76d3c2a6cefc.gif)
+
 * Custom
 
 ![Custom](https://cloud.githubusercontent.com/assets/10590799/14092753/556380d4-f506-11e5-9ea8-77690d496596.gif)
