@@ -21,6 +21,11 @@ Or Settings ➔ Packages ➔ Search for `power-effects`
 ### Lights
 ![Lights](https://cloud.githubusercontent.com/assets/10590799/14092737/4e3d524e-f506-11e5-94f4-45cc29229d77.gif)
 
+### Roundies
+![Roundies](https://user-images.githubusercontent.com/10590799/26906063-6ab0042e-4bb0-11e7-8c31-fedf64ef52d1.gif)
+
+*Based on https://github.com/chinchang/code-blast-codemirror*
+
 ### Characters
 * Chinese
 
