@@ -5,11 +5,12 @@
 This package adds some cool effects for the [activate-power-mode](https://github.com/JoelBesada/activate-power-mode)
 
 ## Install
-With apm:
+From Atom go to Settings ➔ Install or with the command `Settings View:Install Packages and Themes` and then search for `power-effects`
+
+Or with apm:
 ```bash
 apm install power-effects
 ```
-Or Settings ➔ Packages ➔ Search for `power-effects`
 
 ## Effects
 ### Stars
