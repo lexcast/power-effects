@@ -22,7 +22,7 @@ module.exports = PowerEffects =
         customSet:
           title: "Custom set"
           type: 'string'
-          description: 'Caracters set used when Characters set is custom'
+          description: 'Characters set used when Characters set is custom'
           default: 'abc'
 
   activate: (state) ->
