@@ -5,6 +5,7 @@ hearts = require './effect/hearts'
 lights = require './effect/lights'
 characters = require './effect/characters'
 roundies = require './effect/roundies'
+sparks = require './effect/sparks'
 
 module.exports = PowerEffects =
   subscriptions: null
@@ -39,8 +40,10 @@ module.exports = PowerEffects =
     lightsEffect = service.createParticlesEffect lights
     charactersEffect = service.createParticlesEffect characters
     roundiesEffect = service.createParticlesEffect roundies
+    sparksEffect = service.createParticlesEffect sparks
     service.registerEffect 'powerEffectsStars', starsEffect
     service.registerEffect 'powerEffectsHearts', heartsEffect
     service.registerEffect 'powerEffectsLights', lightsEffect
     service.registerEffect 'powerEffectsCharacters', charactersEffect
     service.registerEffect 'powerEffectsRoundies', roundiesEffect
+    service.registerEffect 'powerEffectsEmbers', sparksEffect
