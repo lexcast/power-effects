@@ -46,4 +46,4 @@ module.exports = PowerEffects =
     service.registerEffect 'powerEffectsLights', lightsEffect
     service.registerEffect 'powerEffectsCharacters', charactersEffect
     service.registerEffect 'powerEffectsRoundies', roundiesEffect
-    service.registerEffect 'powerEffectsEmbers', sparksEffect
+    service.registerEffect 'powerEffectsSparks', sparksEffect
