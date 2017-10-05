@@ -1,5 +1,11 @@
 # Change Log
 
+## [v0.4.0](https://github.com/lexcast/power-effects/tree/v0.4.0) (2017-10-04) Sparks effect
+[Full Changelog](https://github.com/lexcast/power-effects/compare/v0.3.0...v0.4.0)
+
+- Added Sparks effect [@Karivool](https://github.com/Karivool)
+- Fix install instructions
+
 ## [v0.3.0](https://github.com/lexcast/power-effects/tree/v0.3.0) (2017-06-07) Roundies effect
 [Full Changelog](https://github.com/lexcast/power-effects/compare/v0.2.0...v0.3.0)
 
