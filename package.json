@@ -1,7 +1,7 @@
 {
   "name": "power-effects",
   "main": "./lib/power-effects",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Extra cool effects for the Activate Power Mode Package",
   "keywords": [
     "effect",
