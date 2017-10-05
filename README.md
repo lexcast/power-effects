@@ -27,6 +27,9 @@ apm install power-effects
 
 *Based on https://github.com/chinchang/code-blast-codemirror*
 
+### Sparks
+![Sparks](https://i.imgur.com/7TyIwy1.gif)
+
 ### Characters
 * Chinese
 

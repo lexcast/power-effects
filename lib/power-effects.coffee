@@ -5,6 +5,7 @@ hearts = require './effect/hearts'
 lights = require './effect/lights'
 characters = require './effect/characters'
 roundies = require './effect/roundies'
+sparks = require './effect/sparks'
 
 module.exports = PowerEffects =
   subscriptions: null
@@ -21,7 +22,7 @@ module.exports = PowerEffects =
         customSet:
           title: "Custom set"
           type: 'string'
-          description: 'Caracters set used when Characters set is custom'
+          description: 'Characters set used when Characters set is custom'
           default: 'abc'
 
   activate: (state) ->
@@ -39,8 +40,10 @@ module.exports = PowerEffects =
     lightsEffect = service.createParticlesEffect lights
     charactersEffect = service.createParticlesEffect characters
     roundiesEffect = service.createParticlesEffect roundies
+    sparksEffect = service.createParticlesEffect sparks
     service.registerEffect 'powerEffectsStars', starsEffect
     service.registerEffect 'powerEffectsHearts', heartsEffect
     service.registerEffect 'powerEffectsLights', lightsEffect
     service.registerEffect 'powerEffectsCharacters', charactersEffect
     service.registerEffect 'powerEffectsRoundies', roundiesEffect
+    service.registerEffect 'powerEffectsSparks', sparksEffect
