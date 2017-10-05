@@ -5,6 +5,7 @@ hearts = require './effect/hearts'
 lights = require './effect/lights'
 characters = require './effect/characters'
 roundies = require './effect/roundies'
+lightningEffect = require './effect/lightning'
 
 module.exports = PowerEffects =
   subscriptions: null
@@ -32,8 +33,15 @@ module.exports = PowerEffects =
 
   deactivate: ->
     @subscriptions.dispose()
+    @service.unregisterEffect 'powerEffectsStars'
+    @service.unregisterEffect 'powerEffectsHearts'
+    @service.unregisterEffect 'powerEffectsLights'
+    @service.unregisterEffect 'powerEffectsCharacters'
+    @service.unregisterEffect 'powerEffectsRoundies'
+    @service.unregisterEffect 'powerEffectsLightning'
 
   consumeActivatePowerModeServiceV1: (service) ->
+    @service = service
     starsEffect = service.createParticlesEffect stars
     heartsEffect = service.createParticlesEffect hearts
     lightsEffect = service.createParticlesEffect lights
@@ -44,3 +52,4 @@ module.exports = PowerEffects =
     service.registerEffect 'powerEffectsLights', lightsEffect
     service.registerEffect 'powerEffectsCharacters', charactersEffect
     service.registerEffect 'powerEffectsRoundies', roundiesEffect
+    service.registerEffect 'powerEffectsLightning', lightningEffect
