@@ -30,6 +30,9 @@ apm install power-effects
 ### Sparks
 ![Sparks](https://i.imgur.com/7TyIwy1.gif)
 
+### Smileys
+![Smileys](https://i.imgur.com/xIA9f92.gif)
+
 ### Characters
 * Chinese
 
