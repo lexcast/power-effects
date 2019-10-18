@@ -1,5 +1,16 @@
 # Change Log
 
+## [v0.5.0](https://github.com/lexcast/power-effects/tree/v0.5.0) (2019-10-18) Smiley, last character and characters set effects
+[Full Changelog](https://github.com/lexcast/power-effects/compare/v0.4.0...v0.5.0)
+
+- Added Smiley effect [@BenjaminCo](https://github.com/BenjaminCo)
+- Added Last Character effect
+- Added chess characters set
+- Added cards characters set
+- Added zodiac characters set
+- Added `package-lock.json`
+- Update dependencies
+
 ## [v0.4.0](https://github.com/lexcast/power-effects/tree/v0.4.0) (2017-10-04) Sparks effect
 [Full Changelog](https://github.com/lexcast/power-effects/compare/v0.3.0...v0.4.0)
 
