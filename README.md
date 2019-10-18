@@ -46,6 +46,10 @@ apm install power-effects
 
 ![Greek](https://cloud.githubusercontent.com/assets/10590799/26807403/dab2cf4a-4a1b-11e7-85b9-76d3c2a6cefc.gif)
 
+* Chess
+
+![Chess](https://user-images.githubusercontent.com/10590799/67078348-bc4aa200-f156-11e9-8b94-12197a556f22.gif)
+
 * Custom
 
 ![Custom](https://cloud.githubusercontent.com/assets/10590799/14092753/556380d4-f506-11e5-9ea8-77690d496596.gif)
