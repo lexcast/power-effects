@@ -4,6 +4,7 @@ chinese = "功率火水地球空气最好游戏编程龙虎鹰音乐电脑"
 runic = "ᚠᚢᚦᚨᚱᚲᚷᚹᚺᚾᛁᛃᛇᛈᛉᛊᛏᛒᛖᛗᛚᛜᛞᛟ"
 greek = "ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ"
 chess = "♔♕♖♗♘♙♚♛♜♝♞♟"
+cards = "♠♥♦♣♤♡♢♧"
 
 getCharactersSet = ->
   atom.config.get "power-effects.charactersEffect.set"
@@ -28,6 +29,7 @@ module.exports =
     chars = runic.split("") if set is 'runic'
     chars = greek.split("") if set is 'greek'
     chars = chess.split("") if set is 'chess'
+    chars = cards.split("") if set is 'cards'
     chars = getCustomCharactersSet().split("") if set is 'custom'
     particle.char = chars[Math.floor(Math.random() * chars.length)]
 
