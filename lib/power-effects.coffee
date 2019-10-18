@@ -19,7 +19,7 @@ module.exports = PowerEffects =
           title: "Characters set"
           type: 'string'
           default: 'chinese'
-          enum: ['chinese', 'runic', 'greek', 'chess', 'cards', 'custom']
+          enum: ['chinese', 'runic', 'greek', 'chess', 'cards', 'zodiac', 'custom']
         customSet:
           title: "Custom set"
           type: 'string'

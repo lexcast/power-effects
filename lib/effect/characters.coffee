@@ -5,6 +5,7 @@ runic = "ᚠᚢᚦᚨᚱᚲᚷᚹᚺᚾᛁᛃᛇᛈᛉᛊᛏᛒᛖᛗᛚᛜᛞ�
 greek = "ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ"
 chess = "♔♕♖♗♘♙♚♛♜♝♞♟"
 cards = "♠♥♦♣♤♡♢♧"
+zodiac = "♈♉♊♋♌♍♎♏♐♑♒♓"
 
 getCharactersSet = ->
   atom.config.get "power-effects.charactersEffect.set"
@@ -30,6 +31,7 @@ module.exports =
     chars = greek.split("") if set is 'greek'
     chars = chess.split("") if set is 'chess'
     chars = cards.split("") if set is 'cards'
+    chars = zodiac.split("") if set is 'zodiac'
     chars = getCustomCharactersSet().split("") if set is 'custom'
     particle.char = chars[Math.floor(Math.random() * chars.length)]
 
