@@ -7,6 +7,7 @@ characters = require './effect/characters'
 roundies = require './effect/roundies'
 sparks = require './effect/sparks'
 smiley = require './effect/smiley'
+lastCharacterEffect = require './effect/last-character'
 
 module.exports = PowerEffects =
   subscriptions: null
@@ -50,3 +51,4 @@ module.exports = PowerEffects =
     service.registerEffect 'powerEffectsRoundies', roundiesEffect
     service.registerEffect 'powerEffectsSparks', sparksEffect
     service.registerEffect 'powerEffectsSmiley', smileyEffect
+    service.registerEffect 'powerEffectsLastCharacter', lastCharacterEffect
