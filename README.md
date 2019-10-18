@@ -33,6 +33,9 @@ apm install power-effects
 ### Smileys
 ![Smileys](https://i.imgur.com/xIA9f92.gif)
 
+### Last Character
+![Last Character](https://user-images.githubusercontent.com/10590799/67083645-223c2700-f161-11e9-9a3d-eb250e62ba32.gif)
+
 ### Characters
 * Chinese
 
