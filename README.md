@@ -54,6 +54,10 @@ apm install power-effects
 
 ![Cards](https://user-images.githubusercontent.com/10590799/67079636-28c6a080-f159-11e9-96ee-4b17e9288807.gif)
 
+* Zodiac
+
+![Zodiac](https://user-images.githubusercontent.com/10590799/67080627-3bda7000-f15b-11e9-9863-4af27174c371.gif)
+
 * Custom
 
 ![Custom](https://cloud.githubusercontent.com/assets/10590799/14092753/556380d4-f506-11e5-9ea8-77690d496596.gif)
