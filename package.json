@@ -25,7 +25,7 @@
     }
   },
   "dependencies": {
-    "atom-package-deps": "^4.6.2",
+    "atom-package-deps": "^8.0.0",
     "lodash.random": "^3.2.0"
   },
   "package-deps": [
